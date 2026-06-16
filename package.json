@@ -1,0 +1,12 @@
+{
+ "name": "typehead",
+ "version": "1.0.0",
+ "private": true,
+ "scripts": {
+ "dev": "pnpm --parallel --filter \"./backend\" --filter \"./frontend\" dev",
+ "build": "pnpm -r build",
+ "start": "pnpm -r start",
+ "seed": "pnpm --filter @typehead/backend seed"
+ },
+ "packageManager": "pnpm@9.0.0"
+}
