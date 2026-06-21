@@ -1,0 +1,16 @@
+node_modules/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+pending_writes.json
+.next/
+dist/
+out/
+.env
+.env.local
+data/ngrams_raw.txt
+.pnpm-store/
+coverage/
+.DS_Store
+*.log
