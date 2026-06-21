@@ -16,7 +16,7 @@ function get(path: string) {
                 } catch {
                     parsed = data;
                 }
-                resolve({ status: res.statusCode, body: parsed });
+                resolve({ status: res.statusCode ?? 0, body: parsed });
             });
         }).on('error', reject);
     });

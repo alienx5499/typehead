@@ -1,29 +1,59 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
- --color-bg: #09090b;
- --color-fg: #fafafa;
- --color-muted: #71717a;
- --color-line: #27272a;
- --color-line-strong: #3f3f46;
- --color-surface: #0c0c0e;
- --color-accent: #fafafa;
- --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
- --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
- --font-display: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --color-bg: #09090b;
+    --color-fg: #fafafa;
+    --color-muted: #71717a;
+    --color-line: #27272a;
+    --color-line-strong: #3f3f46;
+    --color-surface: #0c0c0e;
+    --color-accent: #fafafa;
+    --font-sans:
+        ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        'Helvetica Neue', Arial, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+    --font-display:
+        ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-* { box-sizing: border-box; }
-html, body { background: var(--color-bg); color: var(--color-fg); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
-::selection { background: #fafafa; color: #09090b; }
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+}
+::selection {
+    background: #fafafa;
+    color: #09090b;
+}
 
-::placeholder { color: #52525b; }
+::placeholder {
+    color: #52525b;
+}
 
-button { font-family: inherit; }
+button {
+    font-family: inherit;
+}
 
-input:focus { outline: none; }
+input:focus {
+    outline: none;
+}
 
-::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #27272a; border-radius: 0; }
-::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+}
