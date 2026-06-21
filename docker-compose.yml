@@ -1,0 +1,17 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+    - "4002:4002"
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+    - "4001:4001"
+    environment:
+    - NEXT_PUBLIC_API_URL=http://localhost:4002
+    depends_on:
+    - backend
