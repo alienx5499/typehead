@@ -14,3 +14,10 @@ data/ngrams_raw.txt
 coverage/
 .DS_Store
 *.log
+
+# Runtime data (SQLite WAL, snapshots)
+backend/data/
+
+# Build artifacts
+backend/scripts/*.js
+backend/scripts/*.js.map
