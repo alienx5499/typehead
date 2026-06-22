@@ -7,7 +7,7 @@ const DATA_PATH = path.resolve(process.env.DATA_PATH ?? 'data/ngrams_raw.txt');
 
 async function main() {
     const dbPath = process.env.DB_PATH ?? path.resolve('dist/data/typehead.db');
- const { db, persist } = await openDb({ path: path.resolve(dbPath) });
+    const { db, persist } = await openDb({ path: path.resolve(dbPath) });
     initSchema(db);
 
     const raw = fs.readFileSync(DATA_PATH, 'utf8');

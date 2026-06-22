@@ -15,12 +15,16 @@ export function TrendingPanel({ refreshMs = 5000, onPick }: TrendingPanelProps) 
 
     useEffect(() => {
         let cancelled = false;
-        const tick = () =>
-            api
-                .trending()
-                .then((d) => !cancelled && setItems(d.items))
-                .catch(() => !cancelled || undefined)
-                .finally(() => !cancelled || setLoading(false));
+        const tick = () => {
+            api.trending()
+                .then((d) => {
+                    if (!cancelled) setItems(d.items);
+                })
+                .catch(() => {})
+                .finally(() => {
+                    if (!cancelled) setLoading(false);
+                });
+        };
         tick();
         const id = setInterval(tick, refreshMs);
         return () => {

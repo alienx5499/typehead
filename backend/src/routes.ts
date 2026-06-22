@@ -107,8 +107,8 @@ export function buildRoutes(deps: RoutesDeps) {
                         score: trendingScore(r.count, r.last_seen),
                     }))
                     .sort((a, b) => b.score - a.score)
-                    .slice(0, 10)
-                    .map(({ q, count }) => ({ q, count }));
+                    .slice(0, 10);
+
                 res.json({ items: ranked });
             } catch (e) {
                 next(e);
